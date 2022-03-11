@@ -9,7 +9,7 @@ from telepot.loop import MessageLoop    # Library function to communicate with t
 import requests
 
 def handle(msg):
-	#now = datetime.datetime.now()
+	
 	#localtime = time.asctime( time.localtime(time.time()) )
 	cwd = os.getcwd()
 	chat_id = msg['chat']['id'] # Receiving the message from telegram
