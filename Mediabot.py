@@ -45,13 +45,12 @@ def handle(msg):
 				#print('Tuner value is ' + Tuner)
 				print(RawChan[LstIndex] + ' is playing in a Tuner.')
 				print('No need to reset DB.')
-				#print("Tuner " + str(num) + " Not in use")
-				#AllTunerStatus.append(RawChan[LstIndex])
+				
 				
 			elif str(RawChan[LstIndex]) not in AllTunerStatus:
 				print('elif ' + RawChan[LstIndex]+ ' is NOT playing in any Tuner.')
 				print('DataBase User Count for this channel should be reset.')
-				#print(ListDB[LstIndex])
+				
 				UpdateDB = ListDB[LstIndex][:-1] + '0'
 				ListDB[LstIndex] = ListDB[LstIndex][:-1] + '0'
 				print(getDB)
@@ -61,12 +60,7 @@ def handle(msg):
 				write2File.write (My_variable), # this comma at the end prevents from creating a new line inside the text file.
 				write2File.close()
 				
-				#print(UpdateDB)
-				#AllTunerStatus.append('empty')
-				#print('Tuner value is ' + Tuner)
-				#print(ListDB[0])
-				#print (Tuner)
-			#print (Tuner)
+
 				
 		else:
 			print((ListDB[LstIndex].split(' - ')[0]) + ' DB is at 0\n')
